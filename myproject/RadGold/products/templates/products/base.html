@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa"  ;>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>                                 
+    <link href="{% static ' css/products.css' %}" rel="stylesheet">
+    <style>
+        head{ background-color:lightgreen; text-align:center; }
+         main{ background-color:lightblue; text-align:right; }
+         footer{ background-color:lightpink; text-align:center; }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <header class="header">
+        <div class="contaner">   
+        <div class="header-right">
+        <div class="box-head">
+        <h1 style=" font-family: yekan; font-size:20px"> به فروشگاه اینترنتی  ما خوش امدید<h1>
+    </div>
+    <div class="header-left">
+    <nav id="nav-top">
+    <ul>
+        <li>
+        <i class="fa fa-home"></i>
+        <a class="font14" href="index.html">صفحه اصلی</a></li>
+        <li>
+        <i class="fa fa-user"></i>
+            <a class="font14" href="#">کاربران ما</a></li>
+        <li>
+        <i class="fa fa-phone"></i>
+        <a class="font14" href="با ماتماس/تماس با مای.html">تماس با  ما</a></li>
+        <li>
+        <i class="fa fa-address-card"></i>
+        <a class="font14" href="درباره ما/درباره ما.html">درباره ما</a></li>
+    </ul>    
+    </nav>      
+    </div>
+    </div> 
+    <li><a class="font14" href="">شرایط ارسال</a></li>
+    <div class="search-box">
+            <form action="" method="get">
+            <input placeholder="دنبال چی میگردی ...." type="text" class="font15">
+            </form>      
+        </div>
+      
+</header>
+
+<main>
+<body >
+ <div id="main-page">   
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+   <!-- <div id="sidebar">
+        <h2>My products</h2>
+        <p>This is my products.</p>
+    </div>   
+     <button style="margin: 0px 450px 0px 200px; width:300px; height: 80px;" class="btn btn-block font20">
+          <a href="sabad kharid.html"  > سبد خرید </a></button>
+          -->
+</main>
+
+<footer>
+    <div class="footer" > 
+      <div class="col-sm-3 col-xs-3">
+                <h3 style="margin-bottom: 5px;" class="font15">تماس با ما</h3>
+                <p>----------------------------***************----------------------------</p>
+                <p>تلفن:0915 4976705</p>
+                <p>ایدی تلگرام:@mohammadpur7611</p>
+                <p>ایمیل  nasrin mohamadpur@yahoo.com</p>
+
+        </div>
+            
+            <div class="col-sm-3 col-xs-3">
+                <p class="font15" style="margin-bottom: 12px;" text-align: "center";
+                    color: "#fff";>ارسال نظر</p>
+            <div class="form-group">
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="pwd">
+        </div>
+            
+            <button type="button" class="btn btn-primary font14 btn-block">ارسال نظر شما</button>
+            
+
+    </div>
+
+
+</footer>
+
+</body>
+</html>
