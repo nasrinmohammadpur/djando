@@ -111,13 +111,12 @@ def post_share(request, post_id):
 
 
 #def products(request):
-       # infos = post_detail.objects.all()
-       # if request.method == 'POST':
-       #     form = ImageForm(request.POST, request.FILES)
-       #     if form.is_valid():
-       #        Post(name=form.cleaned_data['name'], image=request.FILES['image']).save()
-       #        return redirect('home:home')
-       # else:
+      # infos = post_detail.objects.all()
+      #  if request.method == 'POST':
+         #   form = ImageForm(request.POST, request.FILES)
+         #   if form.is_valid():
+         #      Post(name=form.cleaned_data['name'], image=request.FILES['image']).save()
+        #       return redirect('home:home')
+        # else:
         #    form = ImageForm()
-      #  return render(request, 'products/post/detail.html', {'form':form, 'infos':infos})
-            
+        #return render(request, 'products/post/detail.html', {'form':form, 'infos':infos})
