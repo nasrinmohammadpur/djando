@@ -1,0 +1,53 @@
+{% extends "products/base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p class="date">
+   Published {{ post.publish }} by {{ post.author }}
+</p>
+{% with comments.count as total_comments %}
+<h2>
+{{ total_comments }}تعداد نظر ها {{ total_comments|pluralize }}
+</h2>
+{% endwith %}
+{{ post.body|linebreaks }}
+<hr>
+<p>
+   <a href="{% url "products:post_share" post.id %}">
+   اشتراک گذاری این پست
+   </a>
+</p>
+<h2>پست های مشابه </h2>
+{% for post in similar_posts %}
+<p>
+<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+</p>
+{% empty %}
+پست مشابهی وجود ندارد
+{% endfor %}
+<hr/>
+<h2>نظرها</h2>
+<br/>
+{% for comment in comments %}
+<div class="comment">
+<p class="info">
+Comment {{ forloop.counter }} by {{ comment.name }}
+{{ comment.created }}
+</p>
+{{ comment.body|linebreaks }}
+</div>
+{% empty %}
+<p>کامنتی وجود ندارد</p>
+{% endfor %}
+{% if new_comment %}
+<h2>Your comment has been added.</h2>
+{% else %}
+<h2>نظر خودتو بنویس</h2>
+<form method="post">
+{{ comment_form.as_p }}
+{% csrf_token %}
+<p><input type="submit" value="Add comment"></p>
+</form>
+{% endif %}
+{% endblock %}
+

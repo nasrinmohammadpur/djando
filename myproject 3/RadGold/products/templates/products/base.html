@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa"  ;>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">                                
+    <link href="{% static 'css/products.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+
+<header>
+    <header class="header">
+        <div class="contaner">   
+        <div class="header-right">
+          <br/>  
+        <h1 style=" font-family: yekan; font-size:20px"> به RadGold خوش امدید <h1>
+    </div>
+    <div class="header-left">
+    <h2>زرشک وزعفران محصولات شهر قائنات</h2>
+
+    <div class="search-box">
+            <form action="" method="get">
+               <input placeholder="دنبال چی میگردی ...." type="text" class="font15">
+            </form>      
+    </div>
+    </div> 
+</header>
+<body > 
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <form method="POST" action="{% url 'logout' %}" id="logout">
+            {% csrf_token %}
+            <input type="submit" value="logout" class="btn btn-light">
+        </form>
+        <div id="sidebar">
+                <h2 style="text-align: center;">محصولات شهر قائنات</h2>
+                <br/>
+                <br/>
+                <ul>
+                    <h3>پست های گذشته</h3>
+                    <br/>
+                    <li> <a href="http://localhost:8000/products/2021/5/21/Barberry-pilaf/"> زعفران سرگل </a> </li>
+                    <br/>
+                     <li><a href="http://localhost:8000/products/2021/5/21/Barberry-Qaen/"> زرشک </a></li>
+                     <br/>
+                     <li><a href="http://localhost:8000/products/2021/5/21/Barberry-pilaf/"> زرشفکی </a></li>
+                     <br/>
+                     <li><a href="http://localhost:8000/products/2021/5/21/girl-twist-saffron/"> زعفران دختر پیچ </a></li>
+                     <br/>
+                </ul>
+                <ul>
+                    <h3>پست های جدید</h3>
+                    <br/>
+                    <li> <a href="http://localhost:8000/products/2021/5/21/Saffron-Qaen/">  قائنات زعفران</a> </li>
+                    <br/>
+                </ul>
+        </div> 
+    <hr/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2 class="logo"><a href="#">  RadGold </a></h2>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>دسترسی سریع</h5>
+                        <ul>
+                            <li><a href="#">صفحه نخست</a></li>
+                            <li><a href="#">ورود به سایت</a></li>
+                            <li><a href="#">ثبت نام در سایت</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>طلای سرخ </h5>
+                        <ul>
+                            <li><a href="#">درباره شرکت</a></li>
+                            <li><a href="#">تماس با ما</a></li>
+                            <li><a href="#">سوالات متداول</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>پشتیبانی</h5>
+                        <ul>
+                            <li><a href="#">ارسال تیکت</a></li>
+                            <li><a href="#">مرکز آموزش</a></li>
+                            <li><a href="#">تالار گفتگو</a></li>
+                        </ul>
+                    </div>
+            </div>
+    </footer>   
+</body> 
+</html>
