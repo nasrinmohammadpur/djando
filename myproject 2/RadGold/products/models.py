@@ -50,3 +50,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment by {self.name} on {self.post}'
+
+#class Document(models.Model):
+    #document_addr = models.ImageField(upload_to='documents/%Y/%m/%d/')
+    #uploaded_at = models.DateTimeField(auto_now_add=True)        

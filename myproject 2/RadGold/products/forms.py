@@ -1,6 +1,13 @@
 #from django import forms
 from django import forms
 from .models import Comment
+#from django import forms
+#from uploads.core.models import Document
+ 
+#class DocumentForm(forms.ModelForm):
+    #class Meta:
+    #    model = Document
+    #    fields = ('document_addr' )
 
 #class ImageForm(forms.Form):
       #  name = forms.CharField()

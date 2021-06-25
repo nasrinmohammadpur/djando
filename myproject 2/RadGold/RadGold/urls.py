@@ -17,10 +17,16 @@ import django
 from django.contrib import admin
 from django.forms.forms import Form
 from django.urls import path, include
+from . import views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/', include('products.urls', namespace='products')),
+    path('accounts/',include('account.urls') , name='accounts'),
+    path('', views.home, name='accounts' ),
+    path('login/', views.login, name = 'login'),
+    path('logout/', views.logout, name = 'logout'),
+    path('signup/', views.signup, name='signup')
 ]

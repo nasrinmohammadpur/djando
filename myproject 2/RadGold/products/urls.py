@@ -14,7 +14,9 @@ urlpatterns = [
          name='post_detail'),
       path('<int:post_id>/share/',
             post_share, name='post_share'),
-      path('tag/<slug:tag_slug>/',post_list, name='post_list_by_tag'), ]
+      path('tag/<slug:tag_slug>/',post_list, name='post_list_by_tag'),
+      
+]
 
 #if settings.DEBUG:
-         #urlpatterns += static(settings.MEDIA_URLS, document_root=settings.MADIA_ROOT)
+      # urlpatterns += static(settings.MEDIA_URLS, document_root=settings.MADIA_ROOT)
