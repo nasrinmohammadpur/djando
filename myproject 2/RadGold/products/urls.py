@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import post_list,post_detail,post_share
-#from django.conf import settings
-#from django.conf.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 app_name = 'products'
@@ -17,6 +17,5 @@ urlpatterns = [
       path('tag/<slug:tag_slug>/',post_list, name='post_list_by_tag'),
       
 ]
-
-#if settings.DEBUG:
-      # urlpatterns += static(settings.MEDIA_URLS, document_root=settings.MADIA_ROOT)
+if settings.DEBUG:
+            urlpatterns += static(settings.MEDIA_URLS, document_root=settings.MADIA_ROOT)
